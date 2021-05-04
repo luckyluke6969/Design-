@@ -1,0 +1,13 @@
+.heart {
+    margin: auto;
+    background-color: pink;
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    transform: rotate(-45deg);
+    height: 50px;
+    width: 50px; 
+}
+
