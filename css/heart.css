@@ -1,3 +1,17 @@
+.back {
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        animation-name: backdiv;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+}
+
 .heart {
     margin: auto;
     background-color: pink;
@@ -9,5 +23,54 @@
     transform: rotate(-45deg);
     height: 50px;
     width: 50px; 
+    animation-name: beat;
+    animation-duration: 1s; 
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
 }
+
+.heart::before {
+    content: "";
+    position: absolute; 
+    top: -25px;
+    left: 0; 
+    background-color: pink; 
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25px;
+    border-radius: 50%;
+    background-color: pink; 
+    height: 50px;
+    width: 50px;
+}
+
+.heart:hover {
+    animation-play-state: running;
+}
+
+@keyframes backdiv {
+    50% {
+        background-color: red;
+    }
+}
+
+@keyframes beat {
+  0% {
+      transform: rotate(-45deg);
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(0.5);
+      transform: rotate(-45deg);
+  }
+ }
+
+
 
